@@ -425,16 +425,17 @@ footer{
   color: white;
 }
 
-.reviews .head{
+.reviews .headli{
   font-size: 27px;
   font-weight: 500;
   color: #bcb0b0;
   position: relative;
   margin-bottom: 80px;
   margin-top: 50px;
+  margin-left: 30%;
 }
 
-.head::after{
+.headli::after{
   position: absolute;
   content: '';
   width: 50%;
