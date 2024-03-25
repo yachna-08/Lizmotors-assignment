@@ -105,6 +105,7 @@ nav li:first-child{
         display: none;
     }
 }
+
 .head{
   width: 100%;
   height: auto;
@@ -291,6 +292,7 @@ ul li .date{
   left: -30px;
   transform: translate(-50%, -50%);
 }
+
 footer{
   width: 100%;
   height: auto;
@@ -300,4 +302,178 @@ footer{
   display: grid;
   place-items: center;
   color: #bcb0b0;
+}
+
+.sub-cont{
+  display: none;
+}
+
+.details{
+  width: 100%;
+  height: 400px;
+  background-color: #000;
+}
+
+/* bar graph */
+.bar-graph .year {
+  -webkit-animation: fade-in-text 2.2s 0.1s forwards;
+  -moz-animation: fade-in-text 2.2s 0.1s forwards;
+  animation: fade-in-text 2.2s 0.1s forwards;
+  opacity: 0;
+}
+
+.bar-graph-horizontal {
+  max-width: 1180px;
+  margin-left: 20px;
+}
+
+.bar-graph-horizontal > div {
+  float: left;
+  margin-bottom: 8px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.bar-graph-horizontal .year {
+  float: left;
+  margin-top: 18px;
+  width: 50px;
+  color: white;
+}
+
+.bar-graph-horizontal .bar {
+  border-radius: 3px;
+  height: 55px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  width: 0;
+  margin-left: 40px;
+}
+
+.bar-graph-one .bar::after {
+  -webkit-animation: fade-in-text 2.2s 0.1s forwards;
+  -moz-animation: fade-in-text 2.2s 0.1s forwards;
+  animation: fade-in-text 2.2s 0.1s forwards;
+  color: #fff;
+  content: attr(data-percentage);
+  font-weight: 700;
+  position: absolute;
+  right: 16px;
+  top: 17px;
+}
+
+.bar-graph-one .bar-one .bar {
+  background-image: linear-gradient(to right, rgb(106, 6,236), rgb(220, 0, 240));
+  -webkit-animation: show-bar-one 1.2s 0.1s forwards;
+  -moz-animation: show-bar-one 1.2s 0.1s forwards;
+  animation: show-bar-one 1.2s 0.1s forwards;
+}
+
+.bar-graph-one .bar-two .bar {
+  background-image: linear-gradient(to right, rgb(106, 6,236), rgb(220, 0, 240));
+  -webkit-animation: show-bar-two 1.2s 0.2s forwards;
+  -moz-animation: show-bar-two 1.2s 0.2s forwards;
+  animation: show-bar-two 1.2s 0.2s forwards;
+}
+
+.bar-graph-one .bar-three .bar {
+  background-image: linear-gradient(to right, rgb(106, 6,236), rgb(220, 0, 240));
+  -webkit-animation: show-bar-three 1.2s 0.3s forwards;
+  -moz-animation: show-bar-three 1.2s 0.3s forwards;
+  animation: show-bar-three 1.2s 0.3s forwards;
+}
+
+/* Bar Graph Horizontal Animations */
+@-webkit-keyframes show-bar-one {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 69.6%;
+  }
+}
+
+@-webkit-keyframes show-bar-two {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 71%;
+  }
+}
+
+@-webkit-keyframes show-bar-three {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 74.7%;
+  }
+}
+
+
+@-webkit-keyframes fade-in-text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.reviews{
+  color: white;
+}
+
+.reviews .head{
+  font-size: 27px;
+  font-weight: 500;
+  color: #bcb0b0;
+  position: relative;
+  margin-bottom: 80px;
+  margin-top: 50px;
+}
+
+.head::after{
+  position: absolute;
+  content: '';
+  width: 50%;
+  height: 3px;
+  left: 50%;
+  bottom: -5px;
+  background-image: linear-gradient(to right, rgb(106, 6,236), rgb(220, 0, 240));
+  transform: translateX(-50%);
+}
+
+.positive{
+  margin-left: 950px;
+}
+.Negative{
+  margin-left: 940px;
+}
+.Comments
+{
+  margin-left: 1000px;
+}
+.Total{
+  margin-top: 10px;
+  margin-left: 70%;
+}
+
+@media(max-width: 1200px){
+  .positive{
+      display: none;
+  }
+  .Negative{
+    display: none;
+  }
+  .Comments{
+  display: none;
+  }
+}
+
+@media(max-width: 850px){
+  .bar-graph-horizontal{
+    width: 550px;
+  }
 }
